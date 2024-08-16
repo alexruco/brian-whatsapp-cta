@@ -42,8 +42,17 @@ document.body.appendChild(whatsappIcon);
 
 // Add click event to open WhatsApp chat
 whatsappIcon.addEventListener('click', function() {
+
+    // Push the generate_lead event to the data layer
+    window.dataLayer.push({
+        event: 'generate_lead',
+        lead_source: 'whatsapp_cta'
+    });
+
     const phoneNumber = '1234567890'; // Replace with your WhatsApp number in international format
     const message = 'Hello! How can I help you?'; // Optional: Pre-filled message
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
+
+
 });
