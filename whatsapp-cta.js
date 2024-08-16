@@ -1,5 +1,5 @@
 // Create a style element for custom CSS
-const style = document.createElement('style');
+var style = document.createElement('style');
 style.innerHTML = `
     #whatsapp-icon {
         position: fixed;
@@ -26,7 +26,7 @@ style.innerHTML = `
 document.head.appendChild(style);
 
 // Create the WhatsApp icon container
-const whatsappIcon = document.createElement('div');
+var whatsappIcon = document.createElement('div');
 whatsappIcon.id = 'whatsapp-icon';
 
 // Add the WhatsApp SVG icon
@@ -49,10 +49,9 @@ whatsappIcon.addEventListener('click', function() {
         lead_source: 'whatsapp_cta'
     });
 
-    const phoneNumber = '1234567890'; // Replace with your WhatsApp number in international format
-    const message = 'Hello! How can I help you?'; // Optional: Pre-filled message
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    var phoneNumber = '1234567890'; // Replace with your WhatsApp number in international format
+    var message = 'Hello! How can I help you?'; // Optional: Pre-filled message
+    var whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
-
 
 });
