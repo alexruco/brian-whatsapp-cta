@@ -10,7 +10,7 @@ style.innerHTML = `
         background-color: #25D366;
         border-radius: 50%;
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
+        z-index: 9999999999;
         cursor: pointer;
         display: flex;
         align-items: center;
